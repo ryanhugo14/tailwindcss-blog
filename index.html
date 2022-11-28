@@ -1,0 +1,287 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/src/build.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="/dist/output.css" rel="stylesheet">
+    <!-- animate.css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- wayponit cdn link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js" integrity="sha512-fHXRw0CXruAoINU11+hgqYvY/PcsOWzmj0QmcSOtjlJcqITbPyypc8cYpidjPurWpCnlB8VKfRwx6PIpASCUkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+</head>
+<style>
+    .active-link {
+        border-bottom: 2px solid;
+        border-color: whitesmoke;
+        border-spacing: 10px;
+    }
+</style>
+
+<body class="dark:bg-[#121927] bg-white">
+    <!-- Navbar-->
+    <nav class="dark:bg-slate-800 bg-green-500 shadow-lg py-2 duration-200 animate__animated" id="fixedNav">
+        <div class="container mx-auto px-5 lg:px-28 flex justify-between items-center">
+            <!-- logo -->
+            <div class="">
+                <img src="/assets/brand-logo (2).svg">
+            </div>
+            <!-- menu -->
+            <div class="fixed w-full h-[250px] -left-full md:inline-block top-0 bg-green-500 dark:bg-slate-900 dark:md:bg-slate-800 z-30 md:static md:w-auto md:h-auto md:top-auto md:right-auto md:bg-inherit duration-500 animate__animated  overflow-hidden shadow-xl md:shadow-none "
+                id="mobileMenu">
+                <div class="md:hidden rounded-full border border-gray-500 flex items-center justify-center w-10 h-10 absolute right-3 top-3 shadow-lg" id="closeMoblieMenu">
+                    <i class="fa-solid fa-x text-black dark:text-white"></i>
+                </div>
+                <ul class="flex flex-col md:flex-row justify-center items-center md:flex md:space-x-3 space-y-5 md:space-y-0 mt-9 md:mt-0 font-medium text-slate-50 dark:text-green-500">
+                    <li>
+                        <a href="#carosel" class="moblieSlideClose active-link cursor-pointer">Home</a>
+                    </li>
+                    <li>
+                        <a href="#member" class="moblieSlideClose cursor-pointer">Whys?</a>
+                    </li>
+                    <li>
+                        <a href="#blog" class="moblieSlideClose cursor-pointer">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#footer" class="moblieSlideClose cursor-pointer">Feature</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- darkMode -->
+            <div class="flex items-center justify-center scale-75 md:scale-100">
+                <button id="dark-switch" onclick="toggleTheme()" class="shadow w-[72px] flex items-center transition duration-200 rounded-full mr-2 md:mr-0 bg-slate-800 p-1">
+                    <div id="dark-switch-icon" class="bg-slate-50 dark:bg-black w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center">
+                        <i class="fa-regular fa-sun"></i>
+                    </div>
+                    <h6 id="dark-text" class="text-slate-200 dark:text-slate-900 translate-x-1">ff</h6>
+                </button>
+                <div class="md:hidden dark:text-green-500 text-black" id="openMobileMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <!-- <h1 id="dark-text-change" class="text-center text-3xl font-bold dark:text-slate-200">Light</h1> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- carosel -->
+    <section class="container mx-auto px-5 lg:px-28 mt-24 relative easein" id="carosel">
+        <!-- Slider main container -->
+        <div class="swiper ">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slide1 -->
+                <div class="swiper-slide">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="/assets/istockphoto-1061119906-612x612.jpg" class="h-80 w-full object-cover" />
+                        <div class="absolute bottom-10 left-0 md:left-5 px-2 md:px-0">
+                            <h2 class="text-2xl font-bold text-white mb-3">
+                                How CPTS empowers job-ready penetration tessting skill in cybersecurity teams
+                            </h2>
+                            <button class="bg-slate-500 text-black px-2 rounded-2xl font-medium mr-2">
+                            10 mins read
+                            </button>
+                            <span class="font-medium text-slate-300">Oct 4, 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide2 -->
+                <div class="swiper-slide">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="/assets/istockphoto-1280385511-612x612.jpg" class="h-80 w-full object-cover" />
+                        <div class="absolute bottom-10 left-0 md:left-5 px-2 md:px-0">
+                            <h2 class="text-2xl font-bold text-white mb-3">
+                                How CPTS empowers job-ready penetration tessting skill in cybersecurity teams
+                            </h2>
+                            <button class="bg-slate-500 text-black px-2 rounded-2xl font-medium mr-2">
+                            10 mins read
+                            </button>
+                            <span class="font-medium text-slate-300">Oct 4, 2022</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide3 -->
+                <div class="swiper-slide">
+                    <div class="relative rounded-xl overflow-hidden">
+                        <img src="/assets/istockphoto-1346010926-612x612.jpg" class="h-80 w-full object-cover" />
+                        <div class="absolute bottom-10 left-0 md:left-5 px-2 md:px-0">
+                            <h2 class="text-2xl font-bold text-white mb-3">
+                                How CPTS empowers job-ready penetration tessting skill in cybersecurity teams
+                            </h2>
+                            <button class="bg-slate-500 text-black px-2 rounded-2xl font-medium mr-2">
+                            10 mins read
+                            </button>
+                            <span class="font-medium text-slate-300">Oct 4, 2022</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prevv md:rounded-full md:w-12 md:h-12 md:bg-slate-700 flex items-center justify-center absolute z-10 bottom-0 left-11 md:left-0 lg:left-24 md:top-1/3"><i class="fa-solid fa-chevron-left text-white w-5 h-5 md:w-auto md:h-auto"></i></div>
+        <div class="swiper-button-nextt md:rounded-full md:w-12 md:h-12 md:bg-slate-700 flex items-center justify-center absolute z-10 bottom-0 right-11 md:right-0 lg:right-24 md:top-1/3"><i class="fa-solid fa-chevron-right text-white w-5 h-5 md:w-auto md:h-auto"></i></div>
+    </section>
+
+    <!-- member -->
+    <section class="container mx-auto px-5 lg:px-28 mt-10 flex justify-center" id="member">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-y-5 md:gap-y-0 gap-x-32 lg:gap-x-36 text-center">
+            <div class="headline">
+                <h4 class="text-2xl font-semibold text-green-500">500+ M</h4>
+                <p class="dark:text-slate-200 text-xs text-slate-600 font-medium">Hacking Labs</p>
+            </div>
+            <div class="headline">
+                <h4 class="text-2xl font-semibold text-green-500">400+ M</h4>
+                <p class="dark:text-slate-200 text-xs text-slate-600 font-medium">Platform Members</p>
+            </div>
+            <div class="headline">
+                <h4 class="text-2xl font-semibold text-green-500">300+ M</h4>
+                <p class="dark:text-slate-200 text-xs text-slate-600 font-medium">Playtime Hours</p>
+            </div>
+            <div class="headline">
+                <h4 class="text-2xl font-semibold text-green-500">300+ K</h4>
+                <p class="dark:text-slate-200 text-xs text-slate-600 font-medium">Companies and University</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog -->
+    <section class="container mx-auto px-5 lg:px-28 mt-20 mb-10" id="blog">
+        <h4 class="dark:text-white text-green-500 text-xl font-semibold">How Hacker Digest</h4>
+        <p class="dark:text-slate-400 text-xs mt-3 font-medium">Want to dive in deeper into a specific category? Click on a topic below</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+            <!-- Cards -->
+            <div class=" shadow-lg rounded-2xl dark:bg-[#1A2332] bg-salte-50 overflow-hidden ease">
+                <!-- Card Img -->
+                <img src="https://images.unsplash.com/photo-1669054626218-f0b57b8ec632?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8JTIzcHJvZ3JhbW1pbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="h-32 w-full object-cover">
+                <!-- Card Content -->
+                <div class="mt-2 px-3 py-5">
+                    <h1 class="text-xs text-green-500 dark:text-slate-200 font-medium uppercase">Hacking | 10 min read</h1>
+                    <p class="dark:text-white text-slate-700 mt-3 text-xl font-semibold max-w-xs">From pocker player to Senior pentester at Oracle:Jeremy's journey into cybersec</p>
+                </div>
+            </div>
+            <div class=" shadow-lg rounded-2xl dark:bg-[#1A2332] bg-salte-50 overflow-hidden ease">
+                <!-- Card Img -->
+                <img src="https://media.istockphoto.com/id/1340232198/photo/programming-for-a-system-using-a-programming-language.jpg?b=1&s=170667a&w=0&k=20&c=yGBHKFLlhcdfT1bmDrkx6YMRI0fscrmvSPovED0VgWQ=" alt="" class="h-32 w-full object-cover">
+                <!-- Card Content -->
+                <div class="mt-2 px-3 py-5">
+                    <h1 class="text-xs text-green-500 dark:text-slate-200 font-medium uppercase">Hacking | 10 min read</h1>
+                    <p class="dark:text-white text-slate-700 mt-3 text-xl font-semibold max-w-xs">From pocker player to Senior pentester at Oracle:Jeremy's journey into cybersec</p>
+                </div>
+            </div>
+            <div class=" shadow-lg rounded-2xl dark:bg-[#1A2332] bg-salte-50 overflow-hidden ease">
+                <!-- Card Img -->
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZ3JhbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" class="h-32 w-full object-cover">
+                <!-- Card Content -->
+                <div class="mt-2 px-3 py-5">
+                    <h1 class="text-xs text-green-500 dark:text-slate-200 font-medium uppercase">Hacking | 10 min read</h1>
+                    <p class="dark:text-white text-slate-700 mt-3 text-xl font-semibold max-w-xs">From pocker player to Senior pentester at Oracle:Jeremy's journey into cybersec</p>
+                </div>
+            </div>
+            <div class=" shadow-lg rounded-2xl dark:bg-[#1A2332] bg-salte-50 overflow-hidden ease">
+                <!-- Card Img -->
+                <img src="https://images.unsplash.com/photo-1617472592135-72a181d04b27?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fHByb2dyYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="h-32 w-full object-cover">
+                <!-- Card Content -->
+                <div class="mt-2 px-3 py-5">
+                    <h1 class="text-xs text-green-500 dark:text-slate-200 font-medium uppercase">Hacking | 10 min read</h1>
+                    <p class="dark:text-white text-slate-700 mt-3 text-xl font-semibold max-w-xs">From pocker player to Senior pentester at Oracle:Jeremy's journey into cybersec</p>
+                </div>
+            </div>
+            <div class=" shadow-lg rounded-2xl dark:bg-[#1A2332] bg-salte-50 overflow-hidden ease">
+                <!-- Card Img -->
+                <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDJ8fHByb2dyYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" class="h-32 w-full object-cover">
+                <!-- Card Content -->
+                <div class="mt-2 px-3 py-5">
+                    <h1 class="text-xs text-green-500 dark:text-slate-200 font-medium uppercase">Hacking | 10 min read</h1>
+                    <p class="dark:text-white text-slate-700 mt-3 text-xl font-semibold max-w-xs">From pocker player to Senior pentester at Oracle:Jeremy's journey into cybersec</p>
+                </div>
+            </div>
+            <div class=" shadow-lg rounded-2xl dark:bg-[#1A2332] bg-salte-50 overflow-hidden ease">
+                <!-- Card Img -->
+                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjUwfHxwcm9ncmFtfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" class="h-32 w-full object-cover">
+                <!-- Card Content -->
+                <div class="mt-2 px-3 py-5">
+                    <h1 class="text-xs text-green-500 dark:text-slate-200 font-medium uppercase">Hacking | 10 min read</h1>
+                    <p class="dark:text-white text-slate-700 mt-3 text-xl font-semibold max-w-xs">From pocker player to Senior pentester at Oracle:Jeremy's journey into cybersec</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="flex justify-end items-center mt-5 md:hidden">
+            <button class="text-lg text-white px-5 py-2 rounded-md dark:bg-slate-800 bg-green-500 shadow-xl">See more</button>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="pt-28 pb-10 bg-slate-900" id="footer">
+        <div class="container mx-auto px-5  lg:px-28 space-y-10 ">
+            <div class="grid md:grid-cols-6 gap-10 md:gap-5 text-center md:text-start ">
+                <div class="text-4xl col-span-2 text-slate-200 font-bold ">
+                    IMAGINE A PLACE
+                </div>
+                <div>
+                    <h4 class="text-slate-300 font-bold mb-1 ">Product</h4>
+                    <ul class="space-y-1 ">
+                        <li class="text-slate-400 ">Download</li>
+                        <li class="text-slate-400 ">Status</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-300 font-bold mb-1 ">Company</h4>
+                    <ul class="space-y-1 ">
+                        <li class="text-slate-400 ">About</li>
+                        <li class="text-slate-400 ">Jobs</li>
+                        <li class="text-slate-400 ">Branding</li>
+                        <li class="text-slate-400 ">Newsroom</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-300 font-bold mb-1 ">Resources</h4>
+                    <ul class="space-y-1 ">
+                        <li class="text-slate-400 ">College</li>
+                        <li class="text-slate-400 ">Support</li>
+                        <li class="text-slate-400 ">Safety</li>
+                        <li class="text-slate-400 ">Blog</li>
+                        <li class="text-slate-400 ">Feedback</li>
+                        <li class="text-slate-400 ">Policies</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-slate-300 font-bold mb-1 ">Policies</h4>
+                    <ul class="space-y-1 ">
+                        <li class="text-slate-400 ">Terms</li>
+                        <li class="text-slate-400 ">Privacy</li>
+                        <li class="text-slate-400 ">Guidelines</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="flex flex-col md:flex-row space-y-5 justify-between items-center">
+                <h3 class="text-4xl text-slate-200 font-bold ">Berry Leaf</h3>
+                <button class=" bg-green-500 py-3 px-8 rounded-full text-white ">
+                    <i class="fa-solid fa-cart-shopping mr-2 "></i>
+                    <span>Sign up</span>
+                </button>
+            </div>
+    </footer>
+    <!-- footer e -->
+
+
+</body>
+<!-- swiper js -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- scrollreveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="/src/main.js"></script>
+
+</html>
